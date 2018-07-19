@@ -2,15 +2,194 @@
 <html>
   <head>
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-    <script src="blend.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="changer">
-      <div class="sub">Playing with</div>
-      <h1>Color Blend Modes</h1>
-      <div class="demos"><a data-go="1">cloudsuit</a><a data-go="2">urbansky</a><a data-go="3">knowledge</a></div>
+<div class="background"></div>
+<div class="container">
+  <div class="layer">
+    <div class="col">
+      <p>function generate() {
+      	var nextSentence = "";
+      	for (var i = 0; i<sentence.length; i++) {
+      		var current = sentence.charAt(i);
+      		var found = false;
+      		if (t==17) {break;}
+      		for (var j = 0; j<rules1.length; j++) {
+      			if (current == rules1[j].a) {
+      				found = true
+      				nextSentence +=rules1[j].b;
+      				break;
+      			}
+      		}
+      		if (!found) {
+      			nextSentence += current;
+      		}
+      	}
+      	sentence = nextSentence;
+      	//createP(sentence);
+      	dragon();
+      	if(t>=17){
+      		background(0);
+      		axiom = axiom1;
+      		sentence = axiom;
+      		t=0;
+      	} else if(t<17) {
+      		t++;
+      	}
+      }</p>
+
+      <p>function dragon() {
+      	background(0);
+      	translate(width/2,height*2/3);
+      	stroke(255);
+      	for (var i = 0; i<sentence.length; i++) {
+      		var current = sentence.charAt(i);
+      		if (current == "F") {
+      			line (0,0,0,-len);
+      			translate(0, -len);
+      		} else if (current == "(") {
+      			rotate(PI / 2);
+      		} else if (current == ")") {
+      			rotate(-PI / 2);
+      		}
+      	}
+      }</p>
+
+      <p>function Symbol(x, y, speed, first, opacity) {
+        this.x = x;
+        this.y = y;
+        this.value;
+
+        this.speed = speed;
+        this.first = first;
+        this.opacity = opacity;
+
+        this.switchInterval = round(random(2, 25));
+
+        this.setToRandomSymbol = function() {
+          var charType = round(random(0, 5));
+          if (frameCount % this.switchInterval == 0) {
+            if (charType > 1) {
+              // set it to Katakana
+              this.value = String.fromCharCode(
+                0x30A0 + round(random(0, 96))
+              );
+            } else {
+              // set it to numeric
+              this.value = round(random(0,9));
+            }
+          }
+        }
+
+        this.rain = function() {
+          this.y = (this.y >= height) ? 0 : this.y += this.speed;
+        }
+
+      }</p>
+
+      <p>class Glitch {
+          constructor(img) {
+              this.channelLen = 4;
+              this.imgOrigin = img;
+              this.imgOrigin.loadPixels();
+              this.copyData = [];
+              this.flowLineImgs = [];
+              this.shiftLineImgs = [];
+              this.shiftRGBs = [];
+              this.scatImgs = [];
+              this.throughFlag = true;
+              this.copyData = new Uint8ClampedArray(this.imgOrigin.pixels);
+      </p>
+
+    </div><div class="col">
+      <p>function keyPressed() {
+      	if (len > 0) {
+      		if (keyCode == SHIFT) {
+      			lenS += 1;
+      		}
+      		if (keyCode == CONTROL) {
+      			lenS -= 1;
+      		}
+      	} else if (len <= 0) {
+      		background(0);
+      		len = 1;
+      		lenS = 0;
+      	}
+      	if (keyCode == ALT) {
+      		if (x == 1) {
+      			generate1();
+      		} else if (x == 2) {
+      			generate2();
+      		} else if (x == 3) {
+      			generate3();
+      		} else if (x == 4) {
+      			generate4();
+      		} else if (x == 5) {
+      			generate5();
+      		} else if (x == 6) {
+      			generate6();
+      		} else if (x == 7) {
+      			generate7();
+      		} else if (x == 8) {
+      			generate8();
+      		} else if (x == 9) {
+      			generate9();
+      		} else if (x == 0) {
+      			generate0();
+      		}
+      	} </p>
+
+      <p>if (keyCode == 'z' || 'Z') {
+    		background(0);
+    		sentence = axiom;
+    		t=0;
+    		y=0;
+    	}
+    	if (key == 'm' || key == 'M') {
+    		background(0);
+    		x = -1;
+    		y = 1;
+    		t=0;
+    	}
+      </p>
+
+      <p>function setup() {
+      	createCanvas(window.innerWidth, window.innerHeight);
+      	background(0);
+      	for (var i = 0; i <= width / symbolSize; i++) {
+      		var stream = new Stream();
+      		stream.generateSymbols(z, random(-2000, 0));
+      		streams.push(stream);
+      		z += symbolSize;
+      	}
+      	textFont('Consolas');
+      	textSize(symbolSize);
+      }
+      </p>
     </div>
-    <div id="container"></div>
+  </div>
+</div>
+</div>
+<div class="overlay"></div>
+<div class="content">
+  <div class="content-title">Homepage
+    </div>
+  <p>By Aaron Ti</p>
+  <h1><span>Redirects:</span></h1>
+  <section class="portfolio-experiment">
+  <a href="https://mcdullti.github.io/LSystem">
+    <span class="text">Lindenmayer System</span>
+    <span class="line -right"></span>
+    <span class="line -top"></span>
+    <span class="line -left"></span>
+    <span class="line -bottom"></span></a>
+  </section>
+  <a href="https://mcdullti.github.io/PTable"><button class="sparkley">Periodic Table<br></button></a>
+  <a href="https://mcdulltii.github.io/blog"><button class="sparkley">Blog</button></a>
+</div>
+<script src="blend.js"></script>
+<script src="scroll.js"></script>
   </body>
   </html>
