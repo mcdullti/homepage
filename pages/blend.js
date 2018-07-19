@@ -4,7 +4,7 @@ var demos = [];
 
 var cloudsuit = {
     one : {
-        bg: "http://github.com/mcdullti/homepage/pages/clouds.jpg",
+        bg: "https://github.com/mcdullti/homepage/blob/master/pages/clouds.jpg",
         bm: "none"
     },
     two : {
