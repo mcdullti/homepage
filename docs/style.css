@@ -82,6 +82,7 @@ $buttonColor: rgba(255,255,255,1);
   transition: 0.35s ease-in-out;
 }
 .title {
+  text-align: center;
   margin-top: 0;
 }
 
