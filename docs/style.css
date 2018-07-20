@@ -56,7 +56,7 @@ $buttonColor: rgba(255,255,255,1);
   opacity: 1;
   pointer-events: inherit;
 }
-.over .modal {
+.modal {
   background: white;
   text-align: center;
   padding: 40px 80px;
@@ -67,20 +67,20 @@ $buttonColor: rgba(255,255,255,1);
   max-height: 100vh;
   overflow-y: auto;
 }
-.over .modal.open {
+.modal.open {
   opacity: 1;
   pointer-events: inherit;
 }
-.over .modal.open .content {
+.open .contente {
   transform: translate(0, 0px);
   opacity: 1;
 }
-.over .modal .content {
+.contente {
   transform: translate(0, -10px);
   opacity: 0;
   transition: 0.35s ease-in-out;
 }
-.over .modal .title {
+.title {
   margin-top: 0;
 }
 
