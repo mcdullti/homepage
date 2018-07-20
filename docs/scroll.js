@@ -27,7 +27,7 @@ $(document).ready(function(){
 
   var last=Date.now();
   var y=0;
-  var speed=0.02;
+  var speed=0.015;
   (function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
