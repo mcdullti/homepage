@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var steps=20;
+  var steps=10;
   var angle=6;
 
   var angleDiff=angle/steps;
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
   var last=Date.now();
   var y=0;
-  var speed=0.05;
+  var speed=0.02;
   (function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
