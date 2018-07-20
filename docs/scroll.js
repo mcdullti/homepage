@@ -1,4 +1,4 @@
-$("#target").click(function(){
+$("#target").one('click', function(){
   var steps=10;
   var angle=6;
 
