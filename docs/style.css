@@ -566,3 +566,8 @@ h4 {
   font-size: 2.2em;
   text-shadow: 0 2px 1px black;
 }
+
+a{
+  color: white;
+  text-decoration: none;
+}
