@@ -57,6 +57,7 @@ $buttonColor: rgba(255,255,255,1);
   pointer-events: inherit;
 }
 .modal {
+  width: 50%;
   background: #cdcdcd;
   text-align: center;
   padding: 40px 20px;
