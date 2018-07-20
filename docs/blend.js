@@ -1,5 +1,5 @@
 $(".modal").each( function(){
-    $(this).wrap('<div class="overlay"></div>')
+    $(this).wrap('<div class="over"></div>')
 });
 
 $(".open-modal").on('click', function(e){
@@ -9,7 +9,7 @@ $(".open-modal").on('click', function(e){
     var $this = $(this),
             modal = $($this).data("modal");
 
-    $(modal).parents(".overlay").addClass("open");
+    $(modal).parents(".over").addClass("open");
     setTimeout( function(){
         $(modal).addClass("open");
     }, 350);
@@ -17,7 +17,7 @@ $(".open-modal").on('click', function(e){
     $(document).on('click', function(e){
         var target = $(e.target);
 
-        if ($(target).hasClass("overlay")){
+        if ($(target).hasClass("over")){
             $(target).find(".modal").each( function(){
                 $(this).removeClass("open");
             });
@@ -39,7 +39,7 @@ $(".close-modal").on('click', function(e){
 
     $(modal).removeClass("open");
     setTimeout( function(){
-        $(modal).parents(".overlay").removeClass("open");
+        $(modal).parents(".over").removeClass("open");
     }, 350);
 
 });

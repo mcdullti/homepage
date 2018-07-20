@@ -24,8 +24,6 @@ $buttonColor: rgba(255,255,255,1);
   height: 2em;
   transition: background-color .5s ease-out, border-radius .5s .25s ease-out, margin .5s .25s ease-out;
   width: 2em;
-  border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;
   color: white;
   text-decoration: none;
   transition: 0.35s ease-in-out;
