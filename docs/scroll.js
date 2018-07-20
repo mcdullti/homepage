@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var steps=10;
+  var steps=20;
   var angle=6;
 
   var angleDiff=angle/steps;
