@@ -109,6 +109,10 @@ body {
   overflow: hidden;
 }
 
+section{
+  text-decoration:none;
+}
+
 .portfolio-experiment, .scene {
   height: 100vh;
   color: #bafffd;
