@@ -1,32 +1,97 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900|Montez);
-
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
 $buttonBackground: #2c3e50;
 $buttonColor: rgba(255,255,255,1);
 
-.sparkley {
-
-  background: lighten( $buttonBackground , 10% );
-  color: $buttonColor;
-  border: none;
-
-  padding: 16px 36px;
-  font-weight: normal;
-
-  border-radius: 3px;
-  transition: all 0.25s ease;
-
-  box-shadow: 0 38px 32px -23px black;
-  margin: 0 1em 1em;
-
-  &:hover {
-
-    background: $buttonBackground;
-    color: transparentize( $buttonColor,0.8 );
-
-  }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.button-container {
+  position: relative;
+  background: #cdcdcd;
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vh;
+  overflow: hidden;
+  border: 1px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.button-container button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: #414141;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.button-container button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+
+.mas {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
 
 html  {
 
@@ -46,6 +111,7 @@ body {
 
 .portfolio-experiment, .scene {
   height: 100vh;
+  color: #bafffd;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -250,12 +316,6 @@ body {
   font-style: oblique;
   font-size: 80px;
   margin-bottom: 35px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  background: linear-gradient(transparent 88%, white 88%, white 92%, transparent 92%);
 }
 
 h1,h2,h3 {
