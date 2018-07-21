@@ -1,4 +1,4 @@
-$("#target").one('click', function(){
+$("#plotly-button").one('click', function(){
   var steps=10;
   var angle=6;
 
