@@ -1,7 +1,7 @@
 var activeClass = "pending";
 var el = document.getElementById("plotly-button");
 
-function toggle(e) {
+$("#plotly-button").one('click', function toggle(e) {
   if (e.keyCode && e.keyCode !== 69) return;
   el.classList.toggle(activeClass);
 }
