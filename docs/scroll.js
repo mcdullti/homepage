@@ -42,6 +42,6 @@ $("#plotly-button").one('click', function(){
 
     requestAnimationFrame(updateScroll);
   }());
-})
 
-$("#scripte").toggle();
+  $("div").stop();
+})
