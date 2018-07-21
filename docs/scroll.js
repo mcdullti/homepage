@@ -1,4 +1,4 @@
-$("#plotly-button").toggle(function(){
+$("#plotly-button").click(function(){
   var steps=10;
   var angle=6;
 
@@ -42,4 +42,7 @@ $("#plotly-button").toggle(function(){
 
     requestAnimationFrame(updateScroll);
   }());
+
+  $("#plotly-button").toggle();
+
 })
