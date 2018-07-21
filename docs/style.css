@@ -39,7 +39,7 @@ $buttonColor: rgba(255,255,255,1);
 .buttone.pending {
   border-radius: 50%;
   height: 85px;
-  padding: 40px;
+  padding: 20px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   background-color: #414141;
