@@ -1,4 +1,4 @@
-$("#text").one('click', function(){
+$(document).ready(function(){
   var steps=10;
   var angle=6;
 
