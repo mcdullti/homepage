@@ -943,16 +943,3 @@ a {
 .tooltip:hover .tooltiptextd {
     visibility: visible;
 }
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: #525252;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .overlay {
-    opacity: 0.5;
-  }
-
-}

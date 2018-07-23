@@ -1,4 +1,4 @@
-$(".plotly-button").click(function(){
+$('.plotly-button').click(function(){
   var last=Date.now();
   var y=0;
   var speed;

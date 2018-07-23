@@ -8,6 +8,15 @@
     window.jQuery || document.write('<script src="http://mysite.com/jquery.min.js"><\/script>')
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script type="text/javascript">
+      testExp = new RegExp('Android|webOS|iPhone|iPad|' +
+                   'BlackBerry|Windows Phone|'  +
+                   'Opera Mini|IEMobile|Mobile' ,
+                  'i');
+
+      if (testExp.test(navigator.userAgent))
+         document.location = "about:blank";
+    </script>
   </head>
   <body>
 <div class="background"></div>
