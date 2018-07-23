@@ -22,7 +22,7 @@ $("#plotly-button").click(function(){
     if (i==1) {
       requestAnimationFrame(updateScroll);
     } else if (i==2) {
-      break;
+      speed = 0;
     }
   }());
 })
