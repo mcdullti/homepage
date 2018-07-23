@@ -1,13 +1,13 @@
 $("#plotly-button").click(function(){
-  var i = 1;
-  if(i%2) {
-    i--;
-  } else {
-    i++;
-  }
   var last=Date.now();
-  var y;
-  var speed=0.015;
+  var y, speed;
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+    speed = 0.015;// odd clicks
+  } else {
+    speed = 0;// even clicks
+  }
+  $(this).data("clicks", !clicks);
   (function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
@@ -19,10 +19,6 @@ $("#plotly-button").click(function(){
       transformOrigin:"50% "+(($(window).height()/3)+y)+"px"
     });
     last=now;
-    if (i==1) {
-      requestAnimationFrame(updateScroll);
-    } else if (i==2) {
-      speed = 0;
-    }
+    requestAnimationFrame(updateScroll);
   }());
 })
