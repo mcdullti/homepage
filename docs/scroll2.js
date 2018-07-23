@@ -3,6 +3,7 @@ var y=0;
 var speed=0.01;
 $("#plotly-button").click(function(){
   var last=Date.now();
+  y=0;
   if (clicks) {
     speed=0.01;
     clicks = false;
