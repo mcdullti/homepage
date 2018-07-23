@@ -858,8 +858,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transform: scale(0.7);
   -webkit-transform-origin: 50% 50vh;
-          transform-origin: 50% 50vh;
+          transform-origin: 50% 30vh;
 }
 
 .content {
