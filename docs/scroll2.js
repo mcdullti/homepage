@@ -1,6 +1,6 @@
 $("#plotly-button").click(function(){
-  $(document).toggle(
   $(".col").each(function(){
+      $(document).toggle(
     requestAnimationFrame(updateScroll);
   }()););
 })
