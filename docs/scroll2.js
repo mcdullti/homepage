@@ -1,17 +1,4 @@
 $("#plotly-button").click(function(){
-  var steps=10;
-  var angle=6;
-
-  var angleDiff=angle/steps;
-  var startAngle=-angle/2;
-  var opacityDiff=(1/steps)+0.05;
-
-  var $container=$(".container");
-  var $original=$(".layer");
-
-  var last=Date.now();
-  var y=0;
-  var speed=0.015;
   $(document).toggle(function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
