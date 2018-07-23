@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$("#plotly-button").one('click', function(){
   var steps=10;
   var angle=6;
 
@@ -40,6 +40,6 @@ $(document).ready(function(){
     });
     last=now;
 
-    // requestAnimationFrame(updateScroll);
+    requestAnimationFrame(updateScroll);
   }());
 })
