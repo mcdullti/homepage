@@ -1,5 +1,4 @@
 $("#plotly-button").click(function(){
-  $(document).toggle(
   var steps=10;
   var angle=6;
 
@@ -13,7 +12,7 @@ $("#plotly-button").click(function(){
   var last=Date.now();
   var y=0;
   var speed=0.015;
-  (function updateScroll(){
+  $(document).toggle(function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
     y+=speed*deltaT;
@@ -26,5 +25,5 @@ $("#plotly-button").click(function(){
     last=now;
 
     requestAnimationFrame(updateScroll);
-  }()););
+  }());
   })
