@@ -40,6 +40,6 @@ $("#plotly-button").one('click', function(){
     });
     last=now;
 
-    requestAnimationFrame(updateScroll);
+    // requestAnimationFrame(updateScroll);
   }());
 })
