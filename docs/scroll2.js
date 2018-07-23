@@ -19,7 +19,10 @@ $("#plotly-button").click(function(){
       transformOrigin:"50% "+(($(window).height()/3)+y)+"px"
     });
     last=now;
-
-    requestAnimationFrame(updateScroll);
+    if (i==1) {
+      requestAnimationFrame(updateScroll);
+    } else if (i==2) {
+      break;
+    }
   }());
 })
