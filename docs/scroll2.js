@@ -1,6 +1,7 @@
 $("#plotly-button").click(function(){
   var last=Date.now();
-
+  var y;
+  var speed=0.015;
   $(document).toggle(function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
