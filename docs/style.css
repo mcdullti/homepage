@@ -427,10 +427,9 @@ $buttonColor: rgba(255,255,255,1);
   padding: 1em;
   position: fixed;
   bottom: 10%;
-  left: 20%;
+  right: 20%;
   text-align: right;
   -webkit-transform: translateY(10%);
-  width: 61.8%;
   white-space: nowrap;
 }
 
@@ -906,6 +905,43 @@ h4 {
 
 a {
   text-decoration: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: white;
+    color: #000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 100%;
+    left: 150%;
+    margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip .tooltiptextd {
+    visibility: hidden;
+    width: auto;
+    background-color: white;
+    color: #000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    right: 150%;
+    margin-right: -60px;
+}
+.tooltip:hover .tooltiptextd {
+    visibility: visible;
 }
 
 @media only screen and (min-width: 600px) {
