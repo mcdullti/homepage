@@ -1,14 +1,14 @@
-$('.plotly-button').click(function(){
+$("#plotly-button").click(function(){
   var last=Date.now();
   var y=0;
   var speed=0.015;
-  var clicks = $(this).data('clicks');
-  if (clicks) {
-    speed = 0.015;// odd clicks
-  } else {
-    speed = 0;// even clicks
-  }
-  $(this).data("clicks", !clicks);
+  // var clicks = $(this).data('clicks');
+  // if (clicks) {
+  //   speed = 0.015;// odd clicks
+  // } else {
+  //   speed = 0;// even clicks
+  // }
+  // $(this).data("clicks", !clicks);
   (function updateScroll(){
     var now=Date.now();
     var deltaT=now-last;
