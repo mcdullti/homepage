@@ -1,8 +1,8 @@
 var clicks = true;
+var y=0;
+var speed=0.015;
 $("#plotly-button").click(function(){
   var last=Date.now();
-  var y=0;
-  var speed=0.015;
   if (clicks) {
     speed=0.015;
     clicks = false;
