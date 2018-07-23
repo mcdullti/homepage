@@ -816,7 +816,7 @@ body {
   color: #332c1a;
   font-size: 20px;
   font-family: Georgia, serif;
-  width: 60em;
+  width: 100%;
   margin-left: -30em;
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
@@ -834,7 +834,7 @@ body {
 .col {
   position: relative;
   width: 49%;
-  height: 40em;
+  height: 100%;
   display: inline-block;
   box-sizing: border-box;
   padding-right: 2em;
