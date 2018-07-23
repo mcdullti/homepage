@@ -1,6 +1,7 @@
 $(".plotly-button").click(function(){
   var last=Date.now();
-  var y, speed;
+  var y=0;
+  var speed;
   var clicks = $(this).data('clicks');
   if (clicks) {
     speed = 0.015;// odd clicks
