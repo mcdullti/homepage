@@ -17,73 +17,205 @@
 <div class="container">
   <div class="layer">
     <div class="col">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-        quis, sem.</p>
+      <p>THREE.TrackballControls = function ( object, domElement ) {
 
-      <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+      	var _this = this;
+      	var STATE = { NONE: -1, ROTATE: 0, ZOOM: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_ZOOM: 4, TOUCH_PAN: 5 };
 
-      <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-        Quisque rutrum.</p>
+      	this.object = object;
+      	this.domElement = ( domElement !== undefined ) ? domElement : document;</p>
 
-      <p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+      <p>this.enabled = true;
 
-      <p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-        mauris sit amet nibh.</p>
+    	this.screen = { width: 0, height: 0, offsetLeft: 0, offsetTop: 0 };
+    	this.radius = ( this.screen.width + this.screen.height ) / 4;
 
-      <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan
-        lorem in dui.</p>
+    	this.rotateSpeed = 1.0;
+    	this.zoomSpeed = 1.2;
+    	this.panSpeed = 0.3;</p>
+
+      <p>this.noRotate = false;
+    	this.noZoom = false;
+    	this.noPan = false;
+
+    	this.staticMoving = false;
+    	this.dynamicDampingFactor = 0.2;
+
+    	this.minDistance = 0;
+    	this.maxDistance = Infinity;
+
+    	this.keys = [ 65 /*A*/, 83 /*S*/, 68 /*D*/ ];</p>
+
+      <p>this.target = new THREE.Vector3();
+
+    	var lastPosition = new THREE.Vector3();
+
+    	var _state = STATE.NONE,
+    	_prevState = STATE.NONE,</p>
+
+      <p>	_eye = new THREE.Vector3(),
+
+        _rotateStart = new THREE.Vector3(),
+        _rotateEnd = new THREE.Vector3(),
+
+        _zoomStart = new THREE.Vector2(),
+        _zoomEnd = new THREE.Vector2(),</p>
+
       <div class="text-backside">
-        <p>Donec venenatis vulputate lorem. Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius
-          ut, felis. In auctor lobortis lacus.</p>
+        <p>_touchZoomDistanceStart = 0,
+      	_touchZoomDistanceEnd = 0,
 
-        <p>Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula. Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing.</p>
+      	_panStart = new THREE.Vector2(),
+      	_panEnd = new THREE.Vector2();</p>
 
-        <p>Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum
-          aliquam leo. Praesent egestas neque eu enim.</p>
+        <p>this.target0 = this.target.clone();
+      	this.position0 = this.object.position.clone();
+      	this.up0 = this.object.up.clone();</p>
 
-        <p>In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum
-          et, malesuada adipiscing, dui.</p>
+        <p>this.handleResize = function () {
 
-        <p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero. Praesent nonummy mi in odio. Nunc interdum lacus sit amet orci. Vestibulum rutrum, mi nec elementum
-          vehicula, eros quam gravida nisl, id fringilla neque ante vel mi. Morbi mollis tellus ac sapien.</p>
+      		this.screen.width = window.innerWidth;
+      		this.screen.height = window.innerHeight;
 
-        <p>Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Fusce vel dui. Sed in libero ut nibh placerat accumsan. Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est.
-          Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.</p>
+      		this.screen.offsetLeft = 0;
+      		this.screen.offsetTop = 0;
+
+      		this.radius = ( this.screen.width + this.screen.height ) / 4;
+
+      	};</p>
+
+        <p>this.handleEvent = function ( event ) {
+
+      		if ( typeof this[ event.type ] == 'function' ) {
+
+      			this[ event.type ]( event );
+
+      		}
+
+      	};
+
+      	this.getMouseOnScreen = function ( clientX, clientY ) {</p>
+
       </div>
     </div><div class="col">
-      <p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu.</p>
+      <p>return new THREE.Vector2(
+  			( clientX - _this.screen.offsetLeft ) / _this.radius * 0.5,
+  			( clientY - _this.screen.offsetTop ) / _this.radius * 0.5
+  		);
 
-      <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy
-        metus.
+  	};
+
+  	this.getMouseProjectionOnBall = function ( clientX, clientY ) {</p>
+
+      <p>var mouseOnBall = new THREE.Vector3(
+  			( clientX - _this.screen.width * 0.5 - _this.screen.offsetLeft ) / _this.radius,
+  			( _this.screen.height * 0.5 + _this.screen.offsetTop - clientY ) / _this.radius,
+  			0.0
+  		);
+
+  		var length = mouseOnBall.length();
       </p>
 
-      <p>Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque
-        facilisis.
+      <p>if ( length > 1.0 ) {
+
+  			mouseOnBall.normalize();
+
+  		} else {
+
+  			mouseOnBall.z = Math.sqrt( 1.0 - length * length );
+
+  		}
       </p>
 
-      <p>Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed
-        cursus turpis vitae tortor.</p>
+      <p>_eye.copy( _this.object.position ).sub( _this.target );
 
-      <p>Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis
-        orci.
+  		var projection = _this.object.up.clone().setLength( mouseOnBall.y );
+  		projection.add( _this.object.up.clone().cross( _eye ).setLength( mouseOnBall.x ) );
+  		projection.add( _eye.setLength( mouseOnBall.z ) );
+
+  		return projection;
+
+  	};
+
+  	this.rotateCamera = function () {
+
+  		var angle = Math.acos( _rotateStart.dot( _rotateEnd ) / _rotateStart.length() / _rotateEnd.length() );
+</p>
+
+      <p>if ( angle ) {
+
+  			var axis = ( new THREE.Vector3() ).crossVectors( _rotateStart, _rotateEnd ).normalize(),
+  				quaternion = new THREE.Quaternion();
+
+  			angle *= _this.rotateSpeed;
+
+  			quaternion.setFromAxisAngle( axis, -angle );
       </p>
 
-      <p>Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis.</p>
       <div class="text-backside">
-        <p>Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada
-          pretium. Pellentesque auctor neque nec urna.</p>
+        <p>_eye.applyQuaternion( quaternion );
+  			_this.object.up.applyQuaternion( quaternion );
 
-        <p>Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus
-          a est. Phasellus magna.</p>
+  			_rotateEnd.applyQuaternion( quaternion );
 
-        <p>In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt
-          et, tincidunt eget, semper nec, quam. Sed hendrerit.</p>
+  			if ( _this.staticMoving ) {
 
-        <p>Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce
-          risus nisl, viverra et, tempor et, pretium in, sapien.</p>
+  				_rotateStart.copy( _rotateEnd );</p>
 
-        <p>Donec venenatis vulputate lorem. Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius
-          ut, felis. In auctor lobortis lacus.</p>
+        <p>} else {
+
+  				quaternion.setFromAxisAngle( axis, angle * ( _this.dynamicDampingFactor - 1.0 ) );
+  				_rotateStart.applyQuaternion( quaternion );
+
+  			}
+
+  		}
+
+  	};
+
+  	this.zoomCamera = function () {
+
+  		if ( _state === STATE.TOUCH_ZOOM ) {
+
+  			var factor = _touchZoomDistanceStart / _touchZoomDistanceEnd;
+  			_touchZoomDistanceStart = _touchZoomDistanceEnd;
+  			_eye.multiplyScalar( factor );</p>
+
+        <p>} else {
+
+    			var factor = 1.0 + ( _zoomEnd.y - _zoomStart.y ) * _this.zoomSpeed;
+
+    			if ( factor !== 1.0 && factor > 0.0 ) {
+
+    				_eye.multiplyScalar( factor );
+
+    				if ( _this.staticMoving ) {
+
+    					_zoomStart.copy( _zoomEnd );
+
+    				} else {
+
+    					_zoomStart.y += ( _zoomEnd.y - _zoomStart.y ) * this.dynamicDampingFactor;
+
+    				}
+
+    			}
+
+    		}
+
+    	};</p>
+
+        <p>this.panCamera = function () {
+
+      		var mouseChange = _panEnd.clone().sub( _panStart );
+
+      		if ( mouseChange.lengthSq() ) {
+
+      			mouseChange.multiplyScalar( _eye.length() * _this.panSpeed );
+
+      			var pan = _eye.clone().cross( _this.object.up ).setLength( mouseChange.x );
+      			pan.add( _this.object.up.clone().setLength( mouseChange.y ) );</p>
+
       </div>
     </div>
   </div>
