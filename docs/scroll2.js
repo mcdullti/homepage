@@ -1,10 +1,10 @@
 var clicks = true;
 var y=0;
-var speed=0.015;
+var speed=0.025;
 var last=Date.now();
 $("#plotly-button").click(function(){
   if (clicks) {
-    speed=0.015;
+    speed=0.025;
     clicks = false;
   } else {
     speed=0;
