@@ -943,3 +943,9 @@ a {
 .tooltip:hover .tooltiptextd {
     visibility: visible;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("1.jpg");
+  }
+}
