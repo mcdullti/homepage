@@ -944,7 +944,7 @@ a {
     visibility: visible;
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-width: 600px) {
   body {
     background-image: url("1.jpg");
   }
