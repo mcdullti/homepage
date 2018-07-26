@@ -3,5 +3,6 @@ $( document ).ready(function() {
 
     if (isMobile.matches) {
       $("p").hide();
+      $("#con").hide();
     }
  });
