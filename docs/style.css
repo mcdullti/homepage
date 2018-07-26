@@ -952,11 +952,10 @@ a {
     background-position: center;
   }
   .content {
-    position: absolute;
+    margin: auto;
     top: 25%;
     width: 90%;
     text-align: center;
-    margin: auto;
     font-size: 20px;
   }
 
