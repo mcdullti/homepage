@@ -953,7 +953,7 @@ a {
   }
   .content {
     position: absolute;
-    top: 10%;
+    top: 25%;
     width: 100%;
     text-align: center;
     margin-top: -11%;
@@ -964,5 +964,15 @@ a {
     font-style: oblique;
     font-size: 60px;
     margin-bottom: 35px;
+  }
+  .cont {
+    display: block;
+    padding: 1em;
+    position: fixed;
+    bottom: 7%;
+    right: 10%;
+    text-align: right;
+    -webkit-transform: translateY(10%);
+    white-space: nowrap;
   }
 }
