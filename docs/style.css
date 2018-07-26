@@ -655,7 +655,8 @@ $buttonColor: rgba(255,255,255,1);
 }
 
 html  {
-
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: Lato;
   font-weight: 200;
   font-size: 1em;
