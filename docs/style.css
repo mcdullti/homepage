@@ -952,7 +952,7 @@ a {
     background-position: center;
   }
   .content {
-    position: absolute;
+    position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
