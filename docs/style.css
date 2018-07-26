@@ -965,14 +965,4 @@ a {
     font-size: 60px;
     margin-bottom: 35px;
   }
-  .cont {
-    display: block;
-    padding: 1em;
-    position: fixed;
-    bottom: 7%;
-    right: 10%;
-    text-align: right;
-    -webkit-transform: translateY(10%);
-    white-space: nowrap;
-  }
 }
