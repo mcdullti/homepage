@@ -6,5 +6,6 @@ $( document ).ready(function() {
       $("#con").hide();
       $("#cone").hide();
       $("#conn").hide();
+      $("#modal1").hide();
     }
  });
