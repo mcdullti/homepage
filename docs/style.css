@@ -952,6 +952,7 @@ a {
     background-position: center;
   }
   .content {
+    margin-top: -11%;
     position: relative;
     top: 25%;
     width: 100%;
