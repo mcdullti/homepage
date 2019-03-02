@@ -502,7 +502,7 @@ $buttonColor: rgba(255,255,255,1);
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2vh;
+  margin-top: 7vh;
   overflow: hidden;
   border: 1px solid #000;
   font-family: 'Clicker+Script';
@@ -570,6 +570,44 @@ $buttonColor: rgba(255,255,255,1);
 .button-container-1 button:hover {
   -webkit-animation: ani 0.7s steps(22) forwards;
   animation: ani 0.7s steps(22) forwards;
+}
+
+.button-container-2 {
+  position: relative;
+  background: #cdcdcd;
+  width: 170px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  overflow: hidden;
+  border: 1px solid #000;
+  font-family: 'Clicker+Script';
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.button-container-2 button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Clicker+Script';
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: #414141;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.button-container-2 button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
 }
 
 .mas {
@@ -868,7 +906,6 @@ h4 {
 
 a {
   text-decoration: none;
-  margin-bottom: 5vh;
 }
 
 .tooltip {
