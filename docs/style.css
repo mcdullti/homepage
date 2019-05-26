@@ -950,9 +950,9 @@ a {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    -webkit-background-size: auto auto;
+    -moz-background-size: auto auto;
+    -o-background-size: auto auto;
     background-size: auto auto;
   }
   .content {
