@@ -11,386 +11,6 @@ $buttonColor: rgba(255,255,255,1);
   box-sizing: border-box;
 }
 
-.buttone {
-  background: #525252;
-  border: solid 3px #000;
-  display: inline-block;
-  padding: 5px 20px;
-  margin: 0 auto;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: #000;
-  transition: all 0.2s ease-in-out, background-color 0.05s, color 0.05s;
-  font-size: 0.95rem;
-}
-.buttone:hover {
-  background-color: #414141;
-  color: white;
-}
-.buttone .text {
-  line-height: 34px;
-}
-.buttone .plotlybars-wrapper {
-  display: none;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.buttone.pending {
-  border-radius: 50%;
-  height: 85px;
-  padding: 20px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  background-color: #414141;
-  cursor: auto;
-}
-.buttone.pending .plotlybars-bar {
-  background-color: white;
-}
-.buttone.pending .text {
-  opacity: 0;
-  display: none;
-}
-.buttone.pending .plotlybars-wrapper {
-  display: block;
-}
-
-.plotlybars {
-  padding: 0 10px;
-  vertical-align: bottom;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.plotlybars-wrapper {
-  position: relative;
-  width: 85px;
-  height: 34px;
-  padding-bottom: 17px;
-}
-
-.plotlybars-bar {
-  background-color: #414141;
-  height: 100%;
-  width: 12%;
-  position: absolute;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  -webkit-animation-timing-function: linear;
-}
-
-.b1 {
-  left: 0%;
-  top: 88%;
-  animation-name: b1;
-  -webkit-animation-name: b1;
-}
-
-.b2 {
-  left: 14.3%;
-  top: 76%;
-  animation-name: b2;
-  -webkit-animation-name: b2;
-}
-
-.b3 {
-  left: 28.6%;
-  top: 16%;
-  animation-name: b3;
-  -webkit-animation-name: b3;
-}
-
-.b4 {
-  left: 42.9%;
-  top: 40%;
-  animation-name: b4;
-  -webkit-animation-name: b4;
-}
-
-.b5 {
-  left: 57.2%;
-  top: 26%;
-  animation-name: b5;
-  -webkit-animation-name: b5;
-}
-
-.b6 {
-  left: 71.5%;
-  top: 67%;
-  animation-name: b6;
-  -webkit-animation-name: b6;
-}
-
-.b7 {
-  left: 85.8%;
-  top: 89%;
-  animation-name: b7;
-  -webkit-animation-name: b7;
-}
-
-@keyframes b1 {
-  0% {
-    top: 88%;
-  }
-  44% {
-    top: 0%;
-  }
-  94% {
-    top: 100%;
-  }
-  100% {
-    top: 88%;
-  }
-}
-@-webkit-keyframes b1 {
-  0% {
-    top: 88%;
-  }
-  44% {
-    top: 0%;
-  }
-  94% {
-    top: 100%;
-  }
-  100% {
-    top: 88%;
-  }
-}
-@keyframes b2 {
-  0% {
-    top: 76%;
-  }
-  38% {
-    top: 0%;
-  }
-  88% {
-    top: 100%;
-  }
-  100% {
-    top: 76%;
-  }
-}
-@-webkit-keyframes b2 {
-  0% {
-    top: 76%;
-  }
-  38% {
-    top: 0%;
-  }
-  88% {
-    top: 100%;
-  }
-  100% {
-    top: 76%;
-  }
-}
-@keyframes b3 {
-  0% {
-    top: 16%;
-  }
-  8% {
-    top: 0%;
-  }
-  58% {
-    top: 100%;
-  }
-  100% {
-    top: 16%;
-  }
-}
-@-webkit-keyframes b3 {
-  0% {
-    top: 16%;
-  }
-  8% {
-    top: 0%;
-  }
-  58% {
-    top: 100%;
-  }
-  100% {
-    top: 16%;
-  }
-}
-@keyframes b4 {
-  0% {
-    top: 40%;
-  }
-  20% {
-    top: 0%;
-  }
-  70% {
-    top: 100%;
-  }
-  100% {
-    top: 40%;
-  }
-}
-@-webkit-keyframes b4 {
-  0% {
-    top: 40%;
-  }
-  20% {
-    top: 0%;
-  }
-  70% {
-    top: 100%;
-  }
-  100% {
-    top: 40%;
-  }
-}
-@keyframes b5 {
-  0% {
-    top: 26%;
-  }
-  13% {
-    top: 0%;
-  }
-  63% {
-    top: 100%;
-  }
-  100% {
-    top: 26%;
-  }
-}
-@-webkit-keyframes b5 {
-  0% {
-    top: 26%;
-  }
-  13% {
-    top: 0%;
-  }
-  63% {
-    top: 100%;
-  }
-  100% {
-    top: 26%;
-  }
-}
-@keyframes b6 {
-  0% {
-    top: 67%;
-  }
-  33.5% {
-    top: 0%;
-  }
-  83% {
-    top: 100%;
-  }
-  100% {
-    top: 67%;
-  }
-}
-@-webkit-keyframes b6 {
-  0% {
-    top: 67%;
-  }
-  33.5% {
-    top: 0%;
-  }
-  83% {
-    top: 100%;
-  }
-  100% {
-    top: 67%;
-  }
-}
-@keyframes b7 {
-  0% {
-    top: 89%;
-  }
-  44.5% {
-    top: 0%;
-  }
-  94.5% {
-    top: 100%;
-  }
-  100% {
-    top: 89%;
-  }
-}
-@-webkit-keyframes b7 {
-  0% {
-    top: 89%;
-  }
-  44.5% {
-    top: 0%;
-  }
-  94.5% {
-    top: 100%;
-  }
-  100% {
-    top: 89%;
-  }
-}
-
-.contain {
-  margin-top: 1.5em;
-  height: 100%;
-  font-family: "Open Sans", verdana, arial, sans-serif;
-  display: flex;
-  align-items: center;
-}
-
-.btn {
-  display: inline-block;
-  cursor: default;
-  padding: 0;
-  margin: 0 auto;
-  margin-left: 0;
-  position: relative;
-  text-align: center;
-  background-color: #cdcdcd;
-  line-height: 2rem;
-  cursor: pointer;
-  height: 2em;
-  transition: background-color .5s ease-out, border-radius .5s .25s ease-out, margin .5s .25s ease-out;
-  width: 2em;
-  color: black;
-  text-decoration: none;
-  transition: 0.35s ease-in-out;
-  font-weight: 700;
-}
-.btn:hover {
-  border-radius: 1em;
-  background: #525252;
-  color: white;
-}
-
-.over {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.75);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.35s ease-in-out;
-  max-height: 100vh;
-  overflow-y: auto;
-}
-.over.open {
-  opacity: 1;
-  pointer-events: inherit;
-}
 .modal {
   width: 50%;
   background: #525252;
@@ -654,214 +274,6 @@ $buttonColor: rgba(255,255,255,1);
   }
 }
 
-html  {
-  overflow-x: hidden;
-  font-family: Lato;
-  font-weight: 200;
-  font-size: 1em;
-  text-align: center;
-  color: #ddd;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-body {
-  text-align: center;
-  overflow: hidden;
-}
-
-.portfolio-experiment, .scene {
-  height: 100vh;
-  color: #bafffd;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-display: flex;
-  -webkit-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
-}
-
-.portfolio-experiment a {
-  color: white;
-  padding: 0.7em calc(0.7em * 1.2);
-  display: inline-block;
-  border: 3px solid transparent;
-  position: relative;
-  font-size: 1.5em;
-  cursor: pointer;
-  letter-spacing: 0.07em;
-}
-.portfolio-experiment a .text {
-  font-family: proxima-nova, monospace;
-  transform: translate3d(0, 0.7em, 0);
-  display: block;
-  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
-}
-.portfolio-experiment a:after {
-  position: absolute;
-  content: '';
-  bottom: -3px;
-  left: calc(0.7em * 1.2);
-  right: calc(0.7em * 1.2);
-  height: 3px;
-  background: #cdcdcd;
-  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
-  transform-origin: left;
-}
-.portfolio-experiment .line {
-  position: absolute;
-  background: #cdcdcd;
-}
-.portfolio-experiment .line.-right, .portfolio-experiment .line.-left {
-  width: 3px;
-  bottom: -3px;
-  top: -3px;
-  transform: scale3d(1, 0, 1);
-}
-.portfolio-experiment .line.-top, .portfolio-experiment .line.-bottom {
-  height: 3px;
-  left: -3px;
-  right: -3px;
-  transform: scale3d(0, 1, 1);
-}
-.portfolio-experiment .line.-right {
-  right: -3px;
-  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
-  transform-origin: top;
-}
-.portfolio-experiment .line.-top {
-  top: -3px;
-  transition: transform 0.08s linear 0.43s;
-  transform-origin: left;
-}
-.portfolio-experiment .line.-left {
-  left: -3px;
-  transition: transform 0.08s linear 0.51s;
-  transform-origin: bottom;
-}
-.portfolio-experiment .line.-bottom {
-  bottom: -3px;
-  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
-  transform-origin: right;
-}
-.portfolio-experiment a:hover .text,
-.portfolio-experiment a:active .text {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
-}
-.portfolio-experiment a:hover:after,
-.portfolio-experiment a:active:after {
-  transform: scale3d(0, 1, 1);
-  right: -3px;
-  left: -3px;
-  transform-origin: right;
-  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
-}
-.portfolio-experiment a:hover .line,
-.portfolio-experiment a:active .line {
-  transform: scale3d(1, 1, 1);
-}
-.portfolio-experiment a:hover .line.-right,
-.portfolio-experiment a:active .line.-right {
-  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
-  transform-origin: bottom;
-}
-.portfolio-experiment a:hover .line.-top,
-.portfolio-experiment a:active .line.-top {
-  transition: transform 0.08s linear 0.4s;
-  transform-origin: right;
-}
-.portfolio-experiment a:hover .line.-left,
-.portfolio-experiment a:active .line.-left {
-  transition: transform 0.08s linear 0.48s;
-  transform-origin: top;
-}
-.portfolio-experiment a:hover .line.-bottom,
-.portfolio-experiment a:active .line.-bottom {
-  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
-  transform-origin: left;
-}
-
-.background {
-  background: linear-gradient(90deg, #eee2ca, #c7b8a2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.overlay {
-  background: linear-gradient(90deg, rgba(238, 226, 202, 0.1), rgba(199, 184, 162, 0)), rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  pointer-events: none;
-}
-
-.container {
-  color: #332c1a;
-  font-size: 20px;
-  font-family: Georgia, serif;
-  width: 100%;
-  margin-left: -30em;
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
-  -webkit-transform: perspective(800px) rotateX(40deg) rotateY(-5deg) rotateZ(5deg);
-          transform: perspective(800px) rotateX(40deg) rotateY(-5deg) rotateZ(5deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  position: absolute;
-  left: 50%;
-}
-
-.col {
-  position: relative;
-  width: 49%;
-  height: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-  padding-right: 2em;
-  vertical-align: top;
-  text-align: justify;
-}
-
-.text-backside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 2em;
-  opacity: 0.05;
-  -webkit-transform-origin: 50% 0;
-          transform-origin: 50% 0;
-  text-shadow: 0 0 6px #332c1a;
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
-}
-
-.layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform-origin: 50% 50vh;
-          transform-origin: 50% 50vh;
-}
-
 .content {
   font-family: Georgia, serif;
   color: #fff;
@@ -944,10 +356,128 @@ a {
     visibility: visible;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background: #ffd1dc url("1.jpg") no-repeat center center fixed;
+:root {
+  font-size: calc(0.5vw + 1vh + 0.5vmin);
+}
+.intro {
+  position: relative;
+  margin: 2em;
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  max-width: 26em;
+}
+.intro h1 {
+  margin-bottom: 0.5em;
+  line-height: 1;
+  font-weight: 100;
+}
+#CrossFade {
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#CrossFade img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #000;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.4) rotate(12deg);
+  animation: CrossFade 24s infinite;
+}
+#CrossFade img:nth-child(3) {
+  animation-delay: 6s;
+}
+#CrossFade img:nth-child(2) {
+  animation-delay: 12s;
+}
+#CrossFade img:nth-child(1) {
+  animation-delay: 18s;
+}
+/* 
+
+$duration = 12
+$slides = 4
+$step = $duration/$slides
+setDelayRevers($duration, $slides)
+  
+  for index in (2..$slides)
+    &:nth-child({index -1}) 
+      animation-delay ($step*index)s
+
+#CrossFade
+  height 100vh
+  overflow hidden
+  position relative
+  
+  display flex
+  img
+    align-self center
+    position absolute
+    
+    min-width 100%
+    min-height 100%
+    height auto
+    
+    backface-visibility hidden
+    opacity 0
+  
+    transform scale(1.4) rotate(12deg)
+    animation CrossFade ($duration)s infinite 
+    setDelayRevers($duration, $slides)   
+@keyframes CrossFade
+  25%
+    opacity 1
+    transform scale(1) rotate(0)
+  40%
+    opacity 0
+    
+*/
+@-moz-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
   }
+  40% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@-o-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .content {
     margin: auto;
     top: 25%;
