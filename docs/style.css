@@ -242,8 +242,8 @@ a {
 }
 #CrossFade img {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   background: #000;
   backface-visibility: hidden;
   opacity: 0;
@@ -347,11 +347,5 @@ setDelayRevers($duration, $slides)
     font-style: oblique;
     font-size: 60px;
     margin-bottom: 35px;
-  }
-  
-  #CrossFade img {
-    height:100%;
-    width: auto;
-    transform: translate(-500px)
   }
 }
