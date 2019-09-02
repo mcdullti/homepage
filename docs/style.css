@@ -241,9 +241,9 @@ a {
   position: relative;
 }
 #CrossFade img {
-  position: absolute;
-  width: auto;
-  height: 100%;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
   background: #000;
   backface-visibility: hidden;
   opacity: 0;
@@ -301,7 +301,7 @@ setDelayRevers($duration, $slides)
 @-moz-keyframes CrossFade {
   25% {
     opacity: 1;
-    transform: scale(1) rotate(0);
+    transform: scale(1.1) rotate(0);
   }
   40% {
     opacity: 0;
@@ -310,7 +310,7 @@ setDelayRevers($duration, $slides)
 @-webkit-keyframes CrossFade {
   25% {
     opacity: 1;
-    transform: scale(1) rotate(0);
+    transform: scale(1.1) rotate(0);
   }
   40% {
     opacity: 0;
@@ -319,7 +319,7 @@ setDelayRevers($duration, $slides)
 @-o-keyframes CrossFade {
   25% {
     opacity: 1;
-    transform: scale(1) rotate(0);
+    transform: scale(1.1) rotate(0);
   }
   40% {
     opacity: 0;
@@ -328,7 +328,7 @@ setDelayRevers($duration, $slides)
 @keyframes CrossFade {
   25% {
     opacity: 1;
-    transform: scale(1) rotate(0);
+    transform: scale(1.1) rotate(0);
   }
   40% {
     opacity: 0;
