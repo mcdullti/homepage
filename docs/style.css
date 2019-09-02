@@ -348,4 +348,47 @@ setDelayRevers($duration, $slides)
     font-size: 60px;
     margin-bottom: 35px;
   }
+  
+  #CrossFade img {
+    width: 100%;
+    height: auto;
+    transform: scale(4.4) rotate(12deg);
+  }
+  
+  @-moz-keyframes CrossFade {
+    25% {
+      opacity: 1;
+      transform: scale(4.1) rotate(0);
+    }
+    40% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes CrossFade {
+    25% {
+      opacity: 1;
+      transform: scale(4.1) rotate(0);
+    }
+    40% {
+      opacity: 0;
+    }
+  }
+  @-o-keyframes CrossFade {
+    25% {
+      opacity: 1;
+      transform: scale(4.1) rotate(0);
+    }
+    40% {
+      opacity: 0;
+    }
+  }
+  @keyframes CrossFade {
+    25% {
+      opacity: 1;
+      transform: scale(4.1) rotate(0);
+    }
+    40% {
+      opacity: 0;
+    }
+  }
 }
