@@ -45,6 +45,90 @@
 0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
 mixpanel.init("9bc6cdfa1674f1e262d374338493f0f0");</script><!-- end Mixpanel -->
+    
+    <style>
+      .site-footer
+			{
+			  position: relative;
+			  bottom: 0;
+			  background-color:#26272b;
+			  padding:45px 150px 20px;
+			  font-size:15px;
+			  line-height:24px;
+			  color:#737373;
+			}
+			.site-footer hr
+			{
+			  border-top-color:#bbb;
+			  opacity:0.5
+			}
+			.site-footer hr.small
+			{
+			  margin:20px 0
+			}
+			.site-footer h6
+			{
+			  color:#fff;
+			  font-size:16px;
+			  text-transform:uppercase;
+			  margin-top:5px;
+			  letter-spacing:2px
+			}
+			.site-footer a
+			{
+			  color:#737373;
+			}
+			.site-footer a:hover
+			{
+			  color:#3366cc;
+			  text-decoration:none;
+			}
+			.footer-links
+			{
+			  padding-left:0;
+			  list-style:none
+			}
+			.footer-links li
+			{
+			  display:block
+			}
+			.footer-links a
+			{
+			  color:#737373
+			}
+			.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+			{
+			  color:#3366cc;
+			  text-decoration:none;
+			}
+			.footer-links.inline li
+			{
+			  display:inline-block
+			}
+			.copyright-text
+			{
+			  margin:0
+			}
+			@media (max-width:991px)
+			{
+			  .site-footer [class^=col-]
+			  {
+			    margin-bottom:30px
+			  }
+			}
+			@media (max-width:767px)
+			{
+			  .site-footer
+			  {
+			    padding:45px 10px 20px;
+			    padding-bottom:0
+			  }
+			  .site-footer .copyright-text
+			  {
+			    text-align:center
+			  }
+			}
+    </style>
   </head>
   <body>
     
@@ -79,7 +163,34 @@ mixpanel.init("9bc6cdfa1674f1e262d374338493f0f0");</script><!-- end Mixpanel -->
 
 </div>
   </body>
-  <footer>
+  <footer class="site-footer">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">By Aaron Ti.<br> A simple website to display all of the renders I have made in the past. <br><i>Hope you enjoy it!</i></p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="http://github.com/mcdulltii/">Github 1</a></li>
+            <li><a href="http://github.com/mcdullti">Github 2</a></li>
+            <li><a href="http://github.com/mcdulltii/coding/">Projects</a></li>
+            <li><a href="https://www.instagram.com/aaronti_/">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://mcdullti.github.io/homepage">Homepage</a></li>
+            <li><a href="http://mcdulltii.github.io/pages/videos.html">Videos</a></li>
+            <li><a href="http://mcdullti.github.io/PTable">Periodic Table</a></li>
+            <li><a href="http://mcdullti.github.io/LSystem">Lindermayer Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
 
     <script type="application/javascript">
        function getIP(json) {
