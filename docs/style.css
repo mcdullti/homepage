@@ -385,6 +385,7 @@ a {
   position: absolute;
   min-width: 100%;
   min-height: 100%;
+  width: 100%;
   height: auto;
   background: #000;
   backface-visibility: hidden;
