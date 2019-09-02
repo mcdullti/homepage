@@ -348,4 +348,10 @@ setDelayRevers($duration, $slides)
     font-size: 60px;
     margin-bottom: 35px;
   }
+  
+  #CrossFade img {
+    height:100%;
+    width: auto;
+    transform: translate(-500px)
+  }
 }
