@@ -20,11 +20,12 @@ $buttonColor: rgba(255,255,255,1);
   margin-right: auto;
   margin-top: 7vh;
   overflow: hidden;
-  border: 1px solid #000;
   font-family: 'Clicker+Script';
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 1px;
+  border-radius: 15px;
+  opacity: 0.8;
 }
 .button-container button {
   width: 101%;
@@ -58,12 +59,13 @@ $buttonColor: rgba(255,255,255,1);
   margin-right: auto;
   margin-top: 2vh;
   overflow: hidden;
-  border: 1px solid #000;
   font-family: 'Clicker+Script';
   font-weight: 300;
   font-size: 20px;
   transition: 0.5s;
   letter-spacing: 1px;
+  border-radius: 15px;
+  opacity: 0.8;
 }
 .button-container-1 button {
   width: 101%;
@@ -97,11 +99,12 @@ $buttonColor: rgba(255,255,255,1);
   margin-right: auto;
   margin-top: 2vh;
   overflow: hidden;
-  border: 1px solid #000;
   font-family: 'Clicker+Script';
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 1px;
+  border-radius: 15px;
+  opacity: 0.8;
 }
 .button-container-2 button {
   width: 101%;
